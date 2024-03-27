@@ -98,41 +98,65 @@ print('\n' * 10)
 
 
 
-class Animals:
+# class Animals:
+#     def __init__(self):
+#         print("Это животное умеет ходить.")
+#
+# class Animal(Animals):
+#     def __init__(self):
+#         Animals.__init__(self)
+#         self.__walk = "Ходит на четырёх лапах."
+#         print(self.__walk)
+#
+#     def meow(self):
+#         return print("Умеет мяукать.")
+#
+# Cat = Animal()
+# Cat.meow()
+# print('\n' * 3)
+#
+#
+#
+#
+#
+#
+#
+# class Animals:
+#     def __init__(self):
+#         print("Это животное умеет ходить.")
+#
+# class Animal(Animals):
+#     def __init__(self, val):
+#         Animals.__init__(self)
+#         self.__walk = f"Ходит на {val}."
+#         print(self.__walk)
+#
+#     def meow(self, val):
+#         return print(f"Умеет {val}.")
+#
+# Cat = Animal("четырёх лапах")
+# Cat.meow("мяукать")
+
+
+
+
+
+
+class Animal:
     def __init__(self):
-        print("Это животное умеет ходить.")
+        self.nogi = 0
+    def walk(self):
+        return print(f"Я хожу на {self.nogi} ногах")
 
-class Animal(Animals):
+class Cat(Animal):
     def __init__(self):
-        Animals.__init__(self)
-        self.__walk = "Ходит на четырёх лапах."
-        print(self.__walk)
+        Animal.__init__(self)
+        self.say = "Miya"
+    def talk(self):
+        return print(self.say)
 
-    def meow(self):
-        return print("Умеет мяукать.")
-
-Cat = Animal()
-Cat.meow()
-print('\n' * 3)
-
-
-
-
-
-
-
-class Animals:
-    def __init__(self):
-        print("Это животное умеет ходить.")
-
-class Animal(Animals):
-    def __init__(self, val):
-        Animals.__init__(self)
-        self.__walk = f"Ходит на {val}."
-        print(self.__walk)
-
-    def meow(self, val):
-        return print(f"Умеет {val}.")
-
-Cat = Animal("четырёх лапах")
-Cat.meow("мяукать")
+caty = Cat()
+caty.say = "GAV"
+caty.talk()
+caty.nogi = 4
+caty.walk()
